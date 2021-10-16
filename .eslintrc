@@ -1,0 +1,129 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "globals": {
+    "JSX": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "import",
+    "@typescript-eslint",
+    "jsx-a11y"
+  ],
+  "rules": {
+    "no-plusplus": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "no-unused-vars": "off",
+    "no-use-before-define": "off",
+    "indent": ["error", 2],
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          ".storybook/**",
+          "**/*.stories.*",
+          "webpack.config.js",
+          "rollup.config.js",
+          "**/*.@(test|spec).*"
+        ]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/state-in-constructor": "off",
+    "no-console": "off",
+    "no-underscore-dangle": "off",
+    "react/forbid-prop-types": "off",
+    "object-curly-newline": "off",
+    "linebreak-style": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-quotes": [
+      "error",
+      "prefer-single"
+    ],
+    "keyword-spacing": "error",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/destructuring-assignment":  "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/no-autofocus": "off",
+    "space-before-blocks": "error",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/type-annotation-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true,
+        "overrides": {
+          "colon": {
+            "before": false,
+            "after": true
+          },
+          "arrow": {
+            "before": true,
+            "after": true
+          }
+        }
+      }
+    ],
+    "max-len": ["error", 80, 2, {
+      "ignoreUrls": true,
+      "ignoreComments": false,
+      "ignoreRegExpLiterals": true,
+      "ignoreStrings": false,
+      "ignoreTemplateLiterals": false
+    }]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "paths": [
+          "src"
+        ],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
